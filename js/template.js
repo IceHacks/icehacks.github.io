@@ -6,6 +6,16 @@ window.isLight = color => {
 	const brightness = (c_r * 299 + c_g * 587 + c_b * 114) / 1000;
 	return brightness > 155;
 };
+var get = theUrl => {
+	var xmlHttp = new XMLHttpRequest();
+	xmlHttp.open("GET", theUrl, false); // false for synchronous request
+	xmlHttp.send(null);
+	return xmlHttp.responseText;
+};
+var versions = JSON.parse(
+	get("https://api.github.com/repos/IceHacks/SurvivCheatInjector/releases")
+);
+var latest = versions[0]["tag_name"];
 
 Vue.component("ice-header", {
 	props: ["name"],
@@ -35,10 +45,10 @@ Vue.component("ice-section", {
 	`
 });
 Vue.component("ice-box", {
-	props: ["color", "title"],
+	props: ["color", "title", "url"],
 	template: `
 		<div class="box" :style="(color ? 'background:'+color+';' : '') + (color ? isLight(color) ? 'color:black;' : 'color:white;' : '')">
-			<h1 v-if=title>{{title}}</h1>
+			<h1 v-if=title><span>{{title}}</span><a v-if=url v-bind:href=url><i class="material-icons">open_in_new</i></a></h1>
 			<slot></slot>
 		</div>
 	`,
@@ -56,15 +66,19 @@ Vue.component("ice-footer", {
 });
 Vue.component("ice-install", {
 	template: `
-		<ice-box color="#6C464F">
+		<ice-box color="#7c7d89" style="background: url(images/background.png);background-attachment: fixed;background-size: cover;max-height: 200px;overflow-y: hidden;box-shadow: inset 0 -55px 20px -30px #f1f1f1;border-radius: 6px 6px 0 0;">
 			<div class="install-box">
 				<div class="install-section">
-					<h1 style="margin:unset;">v1.1.6</h1>
+					<h1 style="margin:unset;">${latest}</h1>
 					<spacer></spacer>
-					<button>INSTALL</button>
+					<button onclick="javascript:window.open('${
+						versions[0]["html_url"]
+					}', '_blank')">INSTALL</button>
 				</div>
-				<div class="install-section">
-					hi
+				<div class="install-section" style="display: block;">
+					${versions[0].body
+						.replace(/\r\n/g, "<br>")
+						.replace(/[#]+(.+?)<br>/g, "<b>$1</b><br>")}
 				</div>
 			</div>
 		</ice-box>
@@ -75,6 +89,12 @@ Vue.component("spacer", {
 		<div class="spacer"></div>
 	`
 });
+Vue.component("ice-version", {
+	template: `<span>v${latest}</span>`
+});
+Vue.component("ice-downloads", {
+	template: `<span>${versions[0].assets[0]["download_count"]}</span>`
+});
 
 var app = new Vue({
 	el: "#app",
@@ -82,3 +102,5 @@ var app = new Vue({
 		name: "IceHacks"
 	}
 });
+
+$("#app").show();

@@ -1,33 +1,39 @@
 :root {
 	--padding: 10px;
 }
-
+@font-face {
+	font-family: Base5;
+	src: url(../fonts/BASE05.otf);
+}
 body {
 	margin: 0;
 	font-family: Arial, Helvetica, sans-serif;
 	background-color: #f1f1f1;
 }
-
 .header {
 	height: 255px;
-	background-color: #0d0630;
+	background-color: #7c7d89;
+	background: url("../images/background.png");
+	background-attachment: fixed;
+	background-size: cover;
 	display: flex;
 	align-items: center;
 	padding: 0 155px;
 	transition: padding 0.3s ease, height 0.3s ease;
+	width: 100%;
 }
 .header span {
-	font-size: 48px;
+	font-size: 60px;
 	line-height: 1;
 	color: white;
 	transition: font-size 0.3s ease;
+	font-family: Base5;
 }
-
 .content {
 	padding: 0 155px;
 	background-color: #f1f1f1;
 	display: flex;
-	transition: padding 0.3s ease;
+	transition: padding 0.3s ease, margin-top 0.3 ease;
 	margin: var(--padding) 0 0;
 }
 .content .section {
@@ -44,6 +50,7 @@ body {
 	margin: var(--padding) 0 calc(var(--padding) * 2);
 	border-radius: 6px;
 	font-size: 16px;
+	text-align: justify;
 }
 .content .section .box a {
 	text-decoration: none;
@@ -52,7 +59,15 @@ body {
 .content .section .box h1 {
 	font-size: 24px;
 	line-height: 1;
-	margin: 0 0 calc(var(--padding) * 2);
+	margin: 0 0 calc((var(--padding) * 2) - 5px);
+	display: flex;
+	align-items: center;
+}
+.content .section .box h1 span {
+	flex: 1;
+}
+.content .section .box h1 a {
+	line-height: 0;
 }
 .content .section .box button {
 	padding: 10px 30px;
@@ -78,29 +93,33 @@ body {
 	align-items: center;
 	display: flex;
 	flex-direction: row;
-	margin-top: var(--padding);
+	color: #f1f1f1;
+	margin-top: Calc(var(--padding) * 1.5);
 }
 .content .section .install-section:nth-child(1) {
 	margin-top: unset;
 }
-
 .spacer {
 	flex: 1;
 }
-
 .inner {
 	max-width: 1200px;
 	margin: 0 auto;
 	flex: 1;
 	display: flex;
 }
-
+.small-header {
+	height: 60px !important;
+}
+.small-header span {
+	font-size: 24px;
+	line-height: 1;
+}
 @media only screen and (max-width: 1200px) {
 	.header,
 	.content {
 		padding: 0 50px;
 	}
-
 	.header {
 		height: 150px;
 	}
@@ -110,7 +129,6 @@ body {
 	.content {
 		padding: 0 20px;
 	}
-
 	.header {
 		height: 60px;
 		margin-bottom: 15px;
@@ -119,7 +137,6 @@ body {
 		font-size: 24px;
 		line-height: 1;
 	}
-
 	:root {
 		--padding: 5px;
 	}
@@ -135,7 +152,10 @@ body {
 		max-width: unset !important;
 	}
 }
-
 * {
 	box-sizing: border-box;
+}
+::selection {
+	background: #000000a6;
+	color: white;
 }
