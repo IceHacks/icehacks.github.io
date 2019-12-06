@@ -84,6 +84,20 @@ Vue.component("ice-install", {
 		</ice-box>
 	`
 });
+Vue.component("ice-social", {
+	props: ["color", "title", "button", "url", "button-color"],
+	template: `
+		<ice-box class="social" v-bind:color=color>
+			<div class="install-box">
+				<div class="install-section" style="color:white">
+					<h1 style="margin:unset;">{{title}}</h1>
+					<spacer></spacer>
+					<button v-bind:style="{background:buttonColor}"  @click="function(){window.open(url, '_blank')}">{{button}}</button>
+				</div>
+			</div>
+		</ice-box>
+	`
+});
 Vue.component("spacer", {
 	template: `
 		<div class="spacer"></div>
