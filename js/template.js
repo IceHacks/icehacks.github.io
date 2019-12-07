@@ -87,16 +87,19 @@ Vue.component("ice-install", {
 Vue.component("ice-social", {
 	props: ["color", "title", "button", "url", "button-color"],
 	template: `
-		<ice-box class="social" v-bind:color=color>
+		<ice-box class="social" :color=color>
 			<div class="install-box">
-				<div class="install-section" style="color:white">
+				<div class="install-section" :style="(color ? isLight(color) ? 'color:black;' : 'color:white;' : '')">
 					<h1 style="margin:unset;">{{title}}</h1>
 					<spacer></spacer>
-					<button v-bind:style="{background:buttonColor}"  @click="function(){window.open(url, '_blank')}">{{button}}</button>
+					<button :style="(buttonColor ? 'background-color:'+buttonColor+';' : '') + (buttonColor ? isLight(buttonColor) ? 'color:black;' : 'color:white;' : '')"  @click="function(){window.open(url, '_blank')}">{{button}}</button>
 				</div>
 			</div>
 		</ice-box>
-	`
+	`,
+	methods: {
+		isLight: window.isLight
+	}
 });
 Vue.component("spacer", {
 	template: `
