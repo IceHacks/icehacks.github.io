@@ -48,7 +48,7 @@ Vue.component("ice-box", {
 	props: ["color", "title", "url"],
 	template: `
 		<div class="box" :style="(color ? 'background:'+color+';' : '') + (color ? isLight(color) ? 'color:black;' : 'color:white;' : '')">
-			<h1 v-if=title><span>{{title}}</span><a v-if=url v-bind:href=url><i class="material-icons">open_in_new</i></a></h1>
+			<h1 v-if=title><span>{{title}}</span><a v-if=url v-bind:href=url target="_blank"><i class="material-icons">open_in_new</i></a></h1>
 			<slot></slot>
 		</div>
 	`,
