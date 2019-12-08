@@ -23,8 +23,6 @@ if (blog) {
 	blogData = JSON.parse(get("/blog/index.json"));
 }
 
-Vue.config.devtools = true;
-
 Vue.component("ice-header", {
 	props: ["name", "sub"],
 	template: `
