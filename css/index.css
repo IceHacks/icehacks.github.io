@@ -3,7 +3,7 @@
 }
 @font-face {
 	font-family: Base5;
-	src: url(../fonts/BASE05.OTF);
+	src: url(/fonts/BASE05.OTF);
 }
 body {
 	margin: 0;
@@ -13,7 +13,7 @@ body {
 .header {
 	height: 255px;
 	background-color: #7c7d89;
-	background: url("../images/background.png");
+	background: url("/images/background.png");
 	background-attachment: fixed;
 	background-size: cover;
 	display: flex;
@@ -23,6 +23,13 @@ body {
 	width: 100%;
 }
 .header span {
+	font-size: 60px;
+	line-height: 1;
+	color: white;
+	transition: font-size 0.3s ease;
+	font-family: Base5;
+}
+.header .sub {
 	font-size: 60px;
 	line-height: 1;
 	color: white;
@@ -84,6 +91,12 @@ body {
 .content .section .box button:focus {
 	outline: none;
 	background: #b3c67c;
+}
+.content .section .box .date {
+	display: block;
+	padding-top: var(--padding);
+	color: #7d7d7d;
+	margin-top: var(--padding);
 }
 .content .section .install-box {
 	display: flex;
