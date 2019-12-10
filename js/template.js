@@ -16,6 +16,13 @@ var versions = JSON.parse(
 	get("https://api.github.com/repos/IceHacks/SurvivCheatInjector/releases")
 );
 var markdown = new showdown.Converter();
+var markdownToHTML = str => {
+	return (
+		"<div class='markdown-body'>" +
+		markdown.makeHtml(str.trim().replace(/(?!\r|\n)(\s\s|\t)/g, "")) +
+		"</div>"
+	);
+};
 var linkToHTML = str => {
 	// http://, https://, ftp://
 	var urlPattern = /\b(?:https?|ftp):\/\/[a-z0-9-+&@#\/%?=~_|!:,.;]*[a-z0-9-+&@#\/%=~_|]/gim;
@@ -79,6 +86,20 @@ Vue.component("ice-box", {
 	`,
 	methods: {
 		isLight: window.isLight
+	}
+});
+Vue.component("markdown", {
+	template: `
+		<div v-html="linkToHTML(markdown(this.$slots.default[0].text))">
+		
+	{{console.log(this.$slots.default[0])}}
+		</div>
+	`,
+	data: () => {
+		return {
+			markdown: markdownToHTML,
+			linkToHTML
+		};
 	}
 });
 Vue.component("ice-footer", {
@@ -147,16 +168,13 @@ Vue.component("ice-sidebar", {
 	`
 });
 Vue.component("ice-posts", {
-	methods: {
-		markdown: markdown.makeHtml
-	},
 	template: `
 		<div>
 			<ice-box v-if="!data || !data.length || (data.length && data.length < 1)">
 				Nothing here...
 			</ice-box>
 			<ice-box v-for="(b, id) in data" :title=b.title>
-				<div v-html="markdown.makeHtml(linkToHTML(b.content))"></div>
+				<div v-html="markdown(linkToHTML(b.content))"></div>
 
 				<small class="date">{{new Date(b.date).toLocaleString()}}</small>
 			</ice-box>
@@ -164,8 +182,12 @@ Vue.component("ice-posts", {
 	`,
 	data: () => {
 		return {
-			data,
-			markdown,
+			data: data
+				.sort((a, b) => {
+					return b.date - a.date;
+				})
+				.filter(a => Date.now() > a.date),
+			markdown: markdownToHTML,
 			linkToHTML
 		};
 	}

@@ -1,7 +1,12 @@
 [
 	{
 		"title": "2.0.1 Update",
-		"content": "This is a feature update that is bringing back some older modules. It can be found here: https://bit.ly/2rx3eTm.<br><br>Merry Christmas!",
+		"content": "This update brings back features that we simply didn't add back in the new `2.0.0` series. We hope to keep making updates like this while we continue to have missing features. It can be found here: https://bit.ly/2rx3eTm.<br><br>Merry Christmas!",
 		"date": 1576006121970
+	},
+	{
+		"title": "Merry Christmas",
+		"content": "This blog post is automated to release on Dec 25th, 2019 (Christmas) at 00:00 GMT-10:00 so that I can just say thanks to you guys on this very merry Christmas day for supporting me. You _probably_ received my gift already, however, since this is written in the past I wouldn't know. I'm having fun making this blog system and it supports `markdown`!<br><br>Merry Christmas!",
+		"date": 1577268000000
 	}
 ]
