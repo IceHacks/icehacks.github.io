@@ -107,7 +107,6 @@ body {
 	display: flex;
 	flex-direction: row;
 	color: #f1f1f1;
-	margin-top: Calc(var(--padding) * 1.5);
 }
 .content .section .install-section:nth-child(1) {
 	margin-top: unset;
@@ -131,6 +130,18 @@ body {
 hr {
 	border: 2px solid #cacaca;
 	margin: var(--padding) 0 calc(var(--padding) * 2);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+p {
+	line-height: 1.5;
+	text-align: left;
 }
 @media only screen and (max-width: 1200px) {
 	.header,

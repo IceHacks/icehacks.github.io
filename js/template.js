@@ -15,12 +15,30 @@ var get = theUrl => {
 var versions = JSON.parse(
 	get("https://api.github.com/repos/IceHacks/SurvivCheatInjector/releases")
 );
-var latest = versions[0]["tag_name"];
-var blog = location.pathname.match(/blog/g);
-var blogdata;
+var markdown = new showdown.Converter();
+var linkToHTML = str => {
+	// http://, https://, ftp://
+	var urlPattern = /\b(?:https?|ftp):\/\/[a-z0-9-+&@#\/%?=~_|!:,.;]*[a-z0-9-+&@#\/%=~_|]/gim;
 
-if (blog) {
-	blogData = JSON.parse(get("/blog/index.json"));
+	// www. sans http:// or https://
+	var pseudoUrlPattern = /(^|[^\/])(www\.[\S]+(\b|$))/gim;
+
+	// Email addresses
+	var emailAddressPattern = /[\w.]+@[a-zA-Z_-]+?(?:\.[a-zA-Z]{2,6})+/gim;
+
+	return str
+		.replace(urlPattern, '<a href="$&">$&</a>')
+		.replace(pseudoUrlPattern, '$1<a href="http://$2">$2</a>')
+		.replace(emailAddressPattern, '<a href="mailto:$&">$&</a>');
+};
+var latest = versions[0]["tag_name"];
+
+var isBlog = location.pathname.match(/blog/g);
+
+var data;
+
+if (isBlog) {
+	data = JSON.parse(get("/blog/index.json"));
 }
 
 Vue.component("ice-header", {
@@ -83,9 +101,7 @@ Vue.component("ice-install", {
 					}', '_blank')">INSTALL</button>
 				</div>
 				<div class="install-section" style="display: block;">
-					${versions[0].body
-						.replace(/\r\n/g, "<br>")
-						.replace(/[#]+(.+?)<br>/g, "<b>$1</b><br>")}
+					${markdown.makeHtml(versions[0].body)}
 				</div>
 			</div>
 		</ice-box>
@@ -117,7 +133,9 @@ Vue.component("ice-version", {
 	template: `<span>v${latest}</span>`
 });
 Vue.component("ice-downloads", {
-	template: `<span>${versions[0].assets[0]["download_count"]}</span>`
+	template: `<span>${versions[0].assets[0][
+		"download_count"
+	].toLocaleString()}</span>`
 });
 Vue.component("ice-sidebar", {
 	template: `
@@ -128,14 +146,17 @@ Vue.component("ice-sidebar", {
 		</ice-section>
 	`
 });
-Vue.component("ice-blog", {
+Vue.component("ice-posts", {
+	methods: {
+		markdown: markdown.makeHtml
+	},
 	template: `
 		<div>
-			<ice-box v-if="blog.length < 1">
+			<ice-box v-if="!data || !data.length || (data.length && data.length < 1)">
 				Nothing here...
 			</ice-box>
-			<ice-box v-for="(b, id) in blog" :title=b.title>
-				{{b.content}}
+			<ice-box v-for="(b, id) in data" :title=b.title>
+				<div v-html="markdown.makeHtml(linkToHTML(b.content))"></div>
 
 				<small class="date">{{new Date(b.date).toLocaleString()}}</small>
 			</ice-box>
@@ -143,7 +164,9 @@ Vue.component("ice-blog", {
 	`,
 	data: () => {
 		return {
-			blog: blogData || null
+			data,
+			markdown,
+			linkToHTML
 		};
 	}
 });
