@@ -29,7 +29,7 @@ body {
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
-	transition: border 2s;
+	transition: border 0.3s;
 }
 
 .navbar-list:hover:not(.active) {
