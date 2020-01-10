@@ -12,33 +12,33 @@ body {
 	background-color: #f1f1f1;
 }
 .navbar {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #484548;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #484548;
 }
 
 .navbar-li {
-  float: left;
+	float: left;
 }
 
-.navbar-list{
-  display: block;
-  color: #C7F3F3;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  transition: border 2s;
+.navbar-list {
+	display: block;
+	color: #c7f3f3;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	transition: border 2s;
 }
 
 .navbar-list:hover:not(.active) {
-  background-color: #2E3131;
-  border-bottom: 3px solid #6AE0E0;
+	background-color: #2e3131;
+	border-bottom: 3px solid #6ae0e0;
 }
 
 .navbar-active {
-  border-bottom: 3px solid #6AE0E0;
+	border-bottom: 3px solid #6ae0e0;
 }
 .header {
 	height: 255px;
@@ -164,7 +164,8 @@ hr {
 
 @media only screen and (max-width: 1200px) {
 	.header,
-	.content {
+	.content,
+	.navbar {
 		padding: 0 50px;
 	}
 	.header {
@@ -173,7 +174,8 @@ hr {
 }
 @media only screen and (max-width: 800px) {
 	.header,
-	.content {
+	.content,
+	.navbar {
 		padding: 0 20px;
 	}
 	.header {
