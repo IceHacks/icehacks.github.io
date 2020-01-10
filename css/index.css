@@ -37,11 +37,11 @@ body {
 
 .navbar-list:hover:not(.active) {
 	background-color: #2e3131;
-	border-bottom: 3px solid #6ae0e0;
+	border-top: 3px solid #6ae0e0;
 }
 
 .navbar-active {
-	border-bottom: 3px solid #6ae0e0;
+	border-top: 3px solid #6ae0e0;
 }
 .header {
 	height: 255px;
