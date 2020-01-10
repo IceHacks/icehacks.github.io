@@ -11,6 +11,34 @@ body {
 		sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 	background-color: #f1f1f1;
 }
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #484548;
+}
+
+.navbar-li {
+  float: left;
+}
+
+.navbar-list{
+  display: block;
+  color: #C7F3F3;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar-list:hover:not(.active) {
+  background-color: #2E3131;
+  border-bottom: 3px solid #6AE0E0;
+}
+
+.navbar-active {
+  border-bottom: 3px solid #6AE0E0;
+}
 .header {
 	height: 255px;
 	background-color: #7c7d89;
