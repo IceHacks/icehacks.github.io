@@ -43,6 +43,7 @@ body {
 .navbar-active {
 	border-top: 3px solid #6ae0e0;
 }
+
 .header {
 	height: 255px;
 	background-color: #7c7d89;
@@ -55,6 +56,7 @@ body {
 	transition: padding 0.3s ease, height 0.3s ease;
 	width: 100%;
 }
+
 .header span {
 	font-size: 60px;
 	line-height: 1;
@@ -62,6 +64,7 @@ body {
 	transition: font-size 0.3s ease;
 	font-family: Base5;
 }
+
 .header .sub {
 	font-size: 60px;
 	line-height: 1;
@@ -69,6 +72,7 @@ body {
 	transition: font-size 0.3s ease;
 	font-family: Base5;
 }
+
 .content {
 	padding: 0 155px;
 	background-color: #f1f1f1;
@@ -76,14 +80,17 @@ body {
 	transition: padding 0.3s ease, margin-top 0.3 ease;
 	margin: var(--padding) 0 0;
 }
+
 .content .section {
 	flex: 1;
 	margin: 0 calc(0px - var(--padding));
 	padding: 0 var(--padding) 0 calc(var(--padding) * 2 + var(--padding));
 }
+
 .content .section:nth-child(1) {
 	padding-left: var(--padding);
 }
+
 .content .section .box {
 	padding: calc(var(--padding) * 2);
 	background-color: white;
@@ -92,10 +99,12 @@ body {
 	font-size: 16px;
 	text-align: justify;
 }
+
 .content .section .box a {
 	text-decoration: none;
 	font-weight: bold;
 }
+
 .content .section .box h1 {
 	font-size: 24px;
 	line-height: 1;
@@ -103,12 +112,15 @@ body {
 	display: flex;
 	align-items: center;
 }
+
 .content .section .box h1 span {
 	flex: 1;
 }
+
 .content .section .box h1 a {
 	line-height: 0;
 }
+
 .content .section .box button {
 	padding: 10px 30px;
 	font-size: 16px;
@@ -121,45 +133,55 @@ body {
 	transition: background 0.1s ease;
 	font-family: monospace;
 }
+
 .content .section .box button:focus {
 	outline: none;
 	background: #b3c67c;
 }
+
 .content .section .box .date {
 	display: block;
 	padding-top: var(--padding);
 	color: #7d7d7d;
 	margin-top: var(--padding);
 }
+
 .content .section .install-box {
 	display: flex;
 	flex-direction: column;
 }
+
 .content .section .install-section {
 	align-items: center;
 	display: flex;
 	flex-direction: row;
 	color: #f1f1f1;
 }
+
 .content .section .install-section:nth-child(1) {
 	margin-top: unset;
 }
+
 .spacer {
 	flex: 1;
 }
+
 .inner {
 	max-width: 1200px;
 	margin: 0 auto;
 	flex: 1;
 	display: flex;
 }
+
 .small-header {
 	height: 60px !important;
 }
+
 .small-header span {
 	font-size: 24px;
 	line-height: 1;
 }
+
 hr {
 	border: 2px solid #cacaca;
 	margin: var(--padding) 0 calc(var(--padding) * 2);
@@ -171,48 +193,59 @@ hr {
 	.navbar {
 		padding: 0 50px;
 	}
+
 	.header {
 		height: 150px;
 	}
 }
+
 @media only screen and (max-width: 800px) {
 	.header,
 	.content,
 	.navbar {
 		padding: 0 20px;
 	}
+
 	.header {
 		height: 60px;
 		margin-bottom: 15px;
 	}
+
 	.header span {
 		font-size: 24px;
 		line-height: 1;
 	}
+
 	:root {
 		--padding: 5px;
 	}
 }
+
 @media only screen and (max-width: 650px) {
 	.inner {
 		display: flex;
 		flex-direction: column-reverse;
 	}
+
 	.content .section {
 		margin: unset;
 		padding: unset !important;
 		max-width: unset !important;
 	}
+
 	.social {
 		display: none;
 	}
+
 	hr {
 		display: none;
 	}
 }
+
 * {
 	box-sizing: border-box;
 }
+
 ::selection {
 	background: #000000a6;
 	color: white;
