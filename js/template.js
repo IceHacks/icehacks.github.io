@@ -205,7 +205,7 @@ Vue.component("ice-navbar", {
 					<li class="navbar-li"><a v-bind:class="(typeof staff == 'string' ? 'navbar-active' : '') + ' navbar-list'" href="#about">Staff Team</a></li>
 				</div>
 			</ul>
-		<div>
+		</div>
 	`
 });
 
