@@ -23,6 +23,7 @@
 
 		<title>IceHacks</title>
 
+		<link rel="icon" href="/images/favicon.ico" />
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link rel="stylesheet"
 			  href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.css" />
@@ -32,14 +33,7 @@
 	<body>
 		<div id="app" style="display: none;">
 			<ice-header :name="name" sub="Blog"></ice-header>
-			<ul class="navbar">
-				<div class="inner">
-					<li class="navbar-li"><a class="navbar-list" href="/">Home</a></li>
-					<li class="navbar-li"><a class="navbar-active navbar-list" href="/blog/">Blog</a></li>
-					<li class="navbar-li"><a class="navbar-list" href="#contact">Cheats</a></li>
-					<li class="navbar-li"><a class="navbar-list" href="#about">Staff Team</a></li>
-				</div>
-			</ul>
+			<ice-navbar blog></ice-navbar>
 			<ice-content>
 				<ice-section>
 					<ice-posts></ice-posts>

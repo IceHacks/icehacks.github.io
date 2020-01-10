@@ -47,6 +47,7 @@ var data;
 if (isBlog) {
 	data = JSON.parse(get("/blog/index.json"));
 }
+Vue.config.devtools = true;
 
 Vue.component("ice-header", {
 	props: ["name", "sub"],
@@ -191,6 +192,21 @@ Vue.component("ice-posts", {
 			linkToHTML
 		};
 	}
+});
+Vue.component("ice-navbar", {
+	props: ["main", "blog", "cheats", "staff"],
+	template: `
+		<div>
+			<ul class="navbar">
+				<div class="inner">
+					<li class="navbar-li"><a v-bind:class="(typeof main == 'string' ?  'navbar-active' : '') + ' navbar-list'" href="/">Home</a></li>
+					<li class="navbar-li"><a v-bind:class="(typeof blog == 'string' ?  'navbar-active' : '') + ' navbar-list'" href="/blog/">Blog</a></li>
+					<li class="navbar-li"><a v-bind:class="(typeof cheats == 'string' ?  'navbar-active' : '') + ' navbar-list'" href="#contact">Cheats</a></li>
+					<li class="navbar-li"><a v-bind:class="(typeof staff == 'string' ? 'navbar-active' : '') + ' navbar-list'" href="#about">Staff Team</a></li>
+				</div>
+			</ul>
+		<div>
+	`
 });
 
 var app = new Vue({
