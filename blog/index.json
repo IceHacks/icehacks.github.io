@@ -8,5 +8,10 @@
 		"title": "Merry Christmas",
 		"content": "This blog post is automated to release on Dec 25th, 2019 (Christmas) at 00:00 GMT-10:00 so that I can just say thanks to you guys on this very merry Christmas day for supporting me. You _probably_ received my gift already, however, since this is written in the past I wouldn't know. I'm having fun making this blog system and it supports `markdown`!<br><br>Merry Christmas!",
 		"date": 1577268000000
+	},
+	{
+		"title": "Site Revamp!",
+		"content": "Hey guys it's Pavnik, just here to say that IceHacks and I have revamped the site! We added a Navigation Bar so now its cleaner instead of everything being on one page. We also have been working on some other stuff and trying to make new cheats and better cheats! See you guys soon!",
+		"date": "1/10/2020"
 	}
 ]
