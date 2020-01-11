@@ -201,7 +201,7 @@ Vue.component("ice-navbar", {
 				<div class="inner">
 					<li class="navbar-li"><a v-bind:class="(typeof main == 'string' ?  'navbar-active' : '') + ' navbar-list'" href="/">Home</a></li>
 					<li class="navbar-li"><a v-bind:class="(typeof blog == 'string' ?  'navbar-active' : '') + ' navbar-list'" href="/blog/">Blog</a></li>
-					<li class="navbar-li"><a v-bind:class="(typeof cheats == 'string' ?  'navbar-active' : '') + ' navbar-list'" href="#contact">Cheats</a></li>
+					<li class="navbar-li"><a v-bind:class="(typeof cheats == 'string' ?  'navbar-active' : '') + ' navbar-list'" href="/cheats/">Cheats</a></li>
 					<li class="navbar-li"><a v-bind:class="(typeof staff == 'string' ? 'navbar-active' : '') + ' navbar-list'" href="#about">Staff Team</a></li>
 				</div>
 			</ul>
