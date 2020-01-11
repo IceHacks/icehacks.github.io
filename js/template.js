@@ -198,7 +198,6 @@ Vue.component("ice-navbar", {
 	template: `
 		<div>
 			<ul class="navbar">
-				<p font-family="Base5">IceHacks</p>
 				<div class="inner">
 					<li class="navbar-li"><a v-bind:class="(typeof main == 'string' ?  'navbar-active' : '') + ' navbar-list'" href="/">Home</a></li>
 					<li class="navbar-li"><a v-bind:class="(typeof blog == 'string' ?  'navbar-active' : '') + ' navbar-list'" href="/blog/">Blog</a></li>
