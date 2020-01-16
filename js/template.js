@@ -194,7 +194,7 @@ Vue.component("ice-posts", {
 	}
 });
 Vue.component("ice-navbar", {
-	props: ["main", "blog", "cheats", "staff"],
+	props: ["main", "blog", "cheats", "staff", "client"],
 	template: `
 		<div>
 			<ul class="navbar">
@@ -203,6 +203,7 @@ Vue.component("ice-navbar", {
 					<li class="navbar-li"><a v-bind:class="(typeof blog == 'string' ?  'navbar-active' : '') + ' navbar-list'" href="/blog/">Blog</a></li>
 					<li class="navbar-li"><a v-bind:class="(typeof cheats == 'string' ?  'navbar-active' : '') + ' navbar-list'" href="/cheats/">Cheats</a></li>
 					<li class="navbar-li"><a v-bind:class="(typeof staff == 'string' ? 'navbar-active' : '') + ' navbar-list'" href="/staff/">The Team</a></li>
+					<li class="navbar-li"><a v-bind:class="(typeof client == 'string' ? 'navbar-active' : '') + ' navbar-list'" href="/client/">Client Area</a></li>
 				</div>
 			</ul>
 		</div>
