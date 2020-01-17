@@ -81,9 +81,7 @@ body {
 #seasonBox {
 	color: white;
 	border: black 1px solid;
-    	margin-top: 1px;
-     	margin-right: 2px;
-     	position:absolute;
+     	position:fixed;
      	top:0;
      	right:0;
 }
