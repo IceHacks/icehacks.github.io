@@ -33,17 +33,17 @@ body {
 }
 
 .btn-disabled {
-	opacity: 0.6;
+	opacity: 0.4;
 	cursor: not-allowed;
-	background-color: #FF4646;
-	color: black;
+	background-color:#5D5E5E;
+	color: #CDCDCD;
 	
 }
 
 .btn-enabled {
 	cursor: pointer;
-	background-color: #86F28A;
-	color: black;
+	background-color:#5D5E5E;
+	color: #CDCDCD;
 }
 
 .login-input[type=password] {
