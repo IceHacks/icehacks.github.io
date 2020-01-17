@@ -73,4 +73,14 @@ body {
 	font-size: 24px;
 	margin: 4px 2px;
 }
-
+.seasonBox {
+	color: white;
+	border: none;
+	line-height: 12px;
+     	width: 18px;
+    	margin-top: 1px;
+     	margin-right: 2px;
+     	position:absolute;
+     	top:0;
+     	right:0;
+}
