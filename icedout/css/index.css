@@ -63,4 +63,14 @@ body {
 	font-size: 32px;
 	margin: 4px 2px;
 }
+.login-title {
+	color: #CDCDCD;
+	font-size: 16px;
+	margin: 4px 2px;
+}
+.seasonTitle {
+	color: #9BE9FC;
+	font-size: 24px;
+	margin: 4px 2px;
+}
 
