@@ -175,7 +175,7 @@ Vue.component("ice-posts", {
 				Nothing here...
 			</ice-box>
 			<ice-box v-for="(b, id) in data" :title=b.title>
-				<div v-html="markdown(linkToHTML(b.content))"></div>
+				<div v-html="markdown((b.content))"></div>
 
 				<small class="date">{{new Date(b.date).toLocaleString()}}</small>
 			</ice-box>
