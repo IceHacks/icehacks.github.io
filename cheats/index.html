@@ -1,54 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-		<meta name="Description" content="IceHacks is both a person and an organization, the father of " IceHacks", as
-			  we now know it. IceHacks is an anonymous donor of cheats, a man of mystery, unknown to the public, and highly
-			  un-credited.">
-		<meta name="Keywords" content="cheat,surviv,io,games,dot io,hack,icehacks,ice,free,surviv,krunker,krunker.io">
-		<meta name="google-site-verification" content="OudNyNftlMBPWbGx1CCo9qyvo7Iom5yjJl3dv8xHrHk" />
+		<meta name="Description" content="IceHacks is both a person and an
+		organization, the father of " IceHacks", as we now know it. IceHacks is
+		an anonymous donor of cheats, a man of mystery, unknown to the public,
+		and highly un-credited.">
+		<meta
+			name="Keywords"
+			content="cheat,surviv,io,games,dot io,hack,icehacks,ice,free,surviv,krunker,krunker.io"
+		/>
+		<meta
+			name="google-site-verification"
+			content="OudNyNftlMBPWbGx1CCo9qyvo7Iom5yjJl3dv8xHrHk"
+		/>
 
 		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-153986266-1"></script>
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=UA-153986266-1"
+		></script>
 		<script>
 			window.dataLayer = window.dataLayer || [];
-			function gtag() { dataLayer.push(arguments); }
-			gtag('js', new Date());
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
 
-			gtag('config', 'UA-153986266-1');
+			gtag("config", "UA-153986266-1");
 		</script>
 
 		<title>IceHacks</title>
 
 		<link rel="icon" href="/images/favicon.ico" />
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<link rel="stylesheet"
-			  href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.css" />
-		<link rel="stylesheet" href="/css/index.css">
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.css"
+		/>
+		<link rel="stylesheet" href="/css/index.css" />
 	</head>
 
 	<body>
-		<div id="app" style="display: none;">
+		<div id="app" style="display: none">
 			<ice-header :name="name" sub="Cheats"></ice-header>
 			<ice-navbar cheats></ice-navbar>
 			<ice-content>
 				<ice-section>
-					<ice-box title="Surviv Cheat Injector" url="https://github.com/IceHacks/SurvivCheatInjector">
-						<img url="../images/surviv.io.png/"></img>
-						The main IceHacks project is <a
-						   href="https://github.com/IceHacks/SurvivCheatInjector">SurvivCheatInjector</a> (SCI), which
-						has been going on strong since May 30th, 2019. Its predecessor was "SurvivCheat", which was 							never on GitHub, and started November 2018. Even more before that was "Megamod" which only 							stayed a while on Github and started in January 2018. SCI is just an injector for the actual 									SurvivCheat which has stayed remotely the same since it's introduction. Today around a thousand 						people visit the SCI page each day.
-						The latest version (<ice-version></ice-version>) has <ice-downloads></ice-downloads> downloads.
+					<ice-box
+						title="Surviv Cheat Injector"
+						url="https://github.com/IceHacks/SurvivCheatInjector"
+					>
+						The main IceHacks project is
+						<a
+							href="https://github.com/IceHacks/SurvivCheatInjector"
+							>SurvivCheatInjector</a
+						>
+						(SCI), which has been going on strong since May 30th,
+						2019. Its predecessor was "SurvivCheat" and even more
+						before that was "Megamod" which started in January 2018.
+						SCI is just the injector for the actual SurvivCheat
+						which has stayed remotely the same since it's
+						introduction. Today the latest version (<ice-version
+						></ice-version>) has
+						<ice-downloads></ice-downloads> downloads.
 					</ice-box>
-					<ice-box title="Krunker Cheat Injector" url="https://github.com/IceHacks/KrunkerCheatInjector">
-						A dead project only dead due to lack of motivation to update it. The IceHacks team doesn't like
+					<ice-box
+						title="Krunker Cheat Injector"
+						url="https://github.com/IceHacks/KrunkerCheatInjector"
+					>
+						A dead project. The IceHacks team doesn't like the game
 						Krunker much.
 					</ice-box>
 					<ice-box title="Shellshock Cheat Injector">
-						Spooky!
+						A project that never really got off the ground due to
+						SCI taking up much time.
 					</ice-box>
 					<ice-footer :name="name"></ice-footer>
 				</ice-section>
