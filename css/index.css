@@ -242,6 +242,28 @@ hr {
 	}
 }
 
+@media (prefers-color-scheme: dark) {
+	body,
+	.content {
+		background-color: #0d0d0d;
+		filter: brightness(80%);
+	}
+
+	.content .section .box,
+	.markdown-body {
+		background-color: #1b1b1b;
+		color: white !important;
+	}
+
+	a {
+		color: #8383e2;
+	}
+
+	.header {
+		filter: brightness(70%);
+	}
+}
+
 * {
 	box-sizing: border-box;
 }
