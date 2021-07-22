@@ -165,6 +165,7 @@ Vue.component("ice-sidebar", {
 			<ice-install></ice-install>
 			<ice-social color="#da3939" title="YouTube" button="SUBSCRIBE" button-color="#f1f1f1" url="https://youtube.com/c/IceHacks?sub_confirmation=1"></ice-social>
 			<ice-social color="#36393f" title="Discord" button="JOIN" button-color="#738bd7" url="https://discord.gg/FB6vjtE4xv"></ice-social>
+			<ice-social color="#0088CC" title="Telegram" button="JOIN" button-color"#FFFFFF" url="https://t.me/icehacks"></ice-social>
 		</ice-section>
 	`
 });
