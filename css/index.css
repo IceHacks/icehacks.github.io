@@ -19,7 +19,7 @@ body {
 	background-color: #11120F;
 }
 
-.navbar .inner {
+.navbar .inner, .header .inner {
     flex-direction: unset;
 }
 
