@@ -19,6 +19,10 @@ body {
 	background-color: #11120F;
 }
 
+.navbar .inner {
+    flex-direction: unset;
+}
+
 .navbar-li {
 	float: left;
 }
