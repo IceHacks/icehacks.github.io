@@ -189,6 +189,7 @@ body {
   	transition: 0.3s;
   	width: 40%;
 	background-color: white;
+	border: 1px solid black;
 }
 
 .staff-card:hover
