@@ -211,6 +211,11 @@ body {
     overflow: hidden;
 }
 
+.staff-card-details-name {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #39923c;
+}
 hr {
 	border: 2px solid #cacaca;
 	margin: var(--padding) 0 calc(var(--padding) * 2);
