@@ -203,6 +203,7 @@ Vue.component("ice-navbar", {
 					<li class="navbar-li"><a v-bind:class="(typeof main == 'string' ?  'navbar-active' : '') + ' navbar-list'" href="/">Home</a></li>
 					<li class="navbar-li"><a v-bind:class="(typeof blog == 'string' ?  'navbar-active' : '') + ' navbar-list'" href="/blog/">Blog</a></li>
 					<li class="navbar-li"><a v-bind:class="(typeof cheats == 'string' ?  'navbar-active' : '') + ' navbar-list'" href="/cheats/">Cheats</a></li>
+					<li class="navbar-li"><a v-bind:class="(typeof staff == 'string' ?  'navbar-active' : '') + ' navbar-list'" href="/staff/">Staff</a></li>
 				</div>
 			</ul>
 		</div>
