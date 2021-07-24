@@ -212,7 +212,7 @@ Vue.component("ice-navbar", {
 Vue.component("ice-staff", {
 	props: ["name", "img", "desc"],
 	template: `
-	<div style="position: relative; text-align: center; width: 250px; height: 315px; background: #e6e5e3; border-radius: 4px; padding: 12px 15px; margin: 20px; box-shadow: 0 0 15px rgb(0 0 0 / 82%), 0 1px 4px rgb(0 0 0 / 10%); display: box;">
+	<div style="position: relative;text-align: center;height: 315px;background: rgb(230 229 227);border-radius: 6px;padding: 12px 15px;margin: 20px;box-shadow: rgb(105 105 105 / 55%) 0px 1px 4px;width: 260px;">
 		<img style="min-width: 110px; max-width: 110px; min-height: 110px; max-height: 110px; border-radius: 50%; overflow: hidden; align: center;" v-bind:src="(img)">
 		<div style="margin: 10px 0; font-size: 18px; color: #30302e;"><div v-html="(name)"></div></div>
 		<div style="max-height: 100px; overflow: hidden; white-space: pre-wrap; margin-bottom: 10px;"><div v-html="(desc)"></div></div>
