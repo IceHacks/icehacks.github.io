@@ -224,6 +224,14 @@ body {
     margin-bottom: 10px;
 }
 
+.staff-card-cat
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 hr {
 	border: 2px solid #cacaca;
 	margin: var(--padding) 0 calc(var(--padding) * 2);
