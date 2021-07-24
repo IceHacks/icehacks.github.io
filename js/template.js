@@ -202,7 +202,7 @@ Vue.component("ice-posts", {
 	}
 });
 Vue.component("ice-navbar", {
-	props: ["main", "blog", "cheats", "staff", "client"],
+	props: ["main", "blog", "cheats", "staff"],
 	template: `
 		<div>
 			<ul class="navbar">
