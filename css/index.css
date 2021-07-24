@@ -216,6 +216,14 @@ body {
     font-size: 18px;
     color: #39923c;
 }
+
+.staff-card-details-about {
+    max-height: 100px;
+    overflow: hidden;
+    white-space: pre-wrap;
+    margin-bottom: 10px;
+}
+
 hr {
 	border: 2px solid #cacaca;
 	margin: var(--padding) 0 calc(var(--padding) * 2);
