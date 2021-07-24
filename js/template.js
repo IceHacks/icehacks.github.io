@@ -69,13 +69,6 @@ Vue.component("ice-content", {
 		</div>
 	`
 });
-Vue.component("ice-staff", {
-	template: `
-		<div class="staff-card">
-		
-		</div>
-	`
-});
 Vue.component("ice-section", {
 	props: ["width", "size"],
 	template: `
