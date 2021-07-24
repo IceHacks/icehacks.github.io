@@ -69,7 +69,7 @@ Vue.component("ice-content", {
 		</div>
 	`
 });
-Vue.componet("ice-staff", {
+Vue.component("ice-staff", {
 	template: `
 		<div class="staff-card">
 		
