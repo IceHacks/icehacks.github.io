@@ -183,7 +183,7 @@ body {
 	line-height: 1;
 }
 
-.staff-card
+.staff
 {
 	position: relative;
    	text-align: center;
@@ -193,43 +193,14 @@ body {
     	border-radius: 4px;
     	padding: 12px 15px;
     	margin: 20px;
-    	box-shadow: 0 0 15px rgb(0 0 0 / 82%), 0 1px 4px rgb(0 0 0 / 10%);
+    	box-shadow: rgb(105 105 105 / 55%) 0px 1px 4px;
 	display: box;
+	transition: box-shadow 0.3s ease;
 }
 
-.staff-card:hover
+.staff:hover
 {
-	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-.staff-card-details-picture {
-    min-width: 110px;
-    max-width: 110px;
-    min-height: 110px;
-    max-height: 110px;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-.staff-card-details-name {
-    margin: 10px 0;
-    font-size: 18px;
-    color: #30302e;
-}
-
-.staff-card-details-about {
-    max-height: 100px;
-    overflow: hidden;
-    white-space: pre-wrap;
-    margin-bottom: 10px;
-}
-
-.staff-card-cat
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+	box-shadow: rgb(47 47 47 / 68%) 0px 3px 5px;
 }
 
 hr {
