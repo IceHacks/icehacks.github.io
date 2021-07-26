@@ -296,7 +296,10 @@ hr {
 }
 
 @media (prefers-color-scheme: dark) {
-	body,
+	body {
+		background-color: #080808;	
+	}
+	
 	.content {
 		background-color: #0d0d0d;
 		filter: brightness(80%);
@@ -304,7 +307,7 @@ hr {
 
 	.content .section .box,
 	.markdown-body {
-		background-color: #1b1b1b;
+		background-color: #2f2f2f;
 		color: white !important;
 	}
 
