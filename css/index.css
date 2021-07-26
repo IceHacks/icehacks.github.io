@@ -307,8 +307,12 @@ hr {
 
 	.content .section .box,
 	.markdown-body {
-		background-color: #2f2f2f;
+		background-color: #212121;
 		color: white !important;
+	}
+	
+	.navbar {
+		background-color: #1a1a1a;
 	}
 
 	a {
@@ -325,6 +329,6 @@ hr {
 }
 
 ::selection {
-	background: #000000a6;
+	background: #ca474782;
 	color: white;
 }
