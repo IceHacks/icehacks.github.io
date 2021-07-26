@@ -113,7 +113,7 @@ Vue.component("ice-footer", {
 });
 Vue.component("ice-install", {
 	template: `
-		<ice-box color="#7c7d89" style="background: url("/images/background.png") 0% 0% / cover fixed;color: white;overflow-y: hidden;border-radius: 6px;">
+		<ice-box color="#7c7d89" style="background: url(/images/background.png) 0% 0% / cover fixed;color: white;overflow-y: hidden;border-radius: 6px;">
 			<div class="install-box">
 				<div class="install-section">
 					<h1 style="margin:unset;">${latest}</h1>
