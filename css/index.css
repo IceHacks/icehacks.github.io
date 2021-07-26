@@ -200,7 +200,7 @@ body {
 
 .staff:hover
 {
-	box-shadow: rgb(47 47 47 / 68%) 0px 3px 5px;
+	box-shadow: rgb(47 47 47 / 68%) 0px 2px 5px;
 }
 
 hr {
@@ -292,6 +292,14 @@ hr {
 
 	.header {
 		filter: brightness(70%);
+	}
+	
+	.staff {
+		background: #232323;
+	}
+	
+	.staff div, .section h2 {
+		color: #ececec;
 	}
 }
 
